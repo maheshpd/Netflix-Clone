@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/json/root_app_json.dart';
+import 'package:netflix_clone/pages/coming_soon_page.dart';
+import 'package:netflix_clone/pages/downloads_page.dart';
 import 'package:netflix_clone/pages/home_page.dart';
+import 'package:netflix_clone/pages/search_page.dart';
 
 class RootApp extends StatefulWidget {
   const RootApp({Key? key}) : super(key: key);
@@ -27,15 +30,9 @@ class _RootAppState extends State<RootApp> {
       index: activeTab,
       children: const [
         HomePage(),
-        Center(
-          child: Text("Coming Soon", style: TextStyle(fontSize: 20, color: Colors.white),),
-        ),
-        Center(
-          child: Text("Search", style: TextStyle(fontSize: 20, color: Colors.white),),
-        ),
-        Center(
-          child: Text("Downloads", style: TextStyle(fontSize: 20, color: Colors.white),),
-        )
+        ComingSoonPage(),
+        SearchPage(),
+        DownloadsPage()
       ],
     );
   }
